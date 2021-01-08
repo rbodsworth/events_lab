@@ -7,11 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
   button.classList.add('delete');
   form.appendChild(button);
 
+  button.addEventListener('click', deleteAllSubmissions);
+
 
   form.addEventListener('submit', handleFormSubmit);
 });
 
-
+const deleteAllSubmissions = (e) => {
+  const list = document.querySelector('#reading-list');
+  list.remove()
+}
 const handleFormSubmit = (e) => {
   e.preventDefault();
 
